@@ -38,7 +38,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			i, ok := m.choices.SelectedItem().(SandboxItem)
 			if ok {
 				choice := i.value
-				writer := WriteCollector{}
+				writer := CollectorWriter{}
 				functoRun := m.funcMap[choice]
 				functoRun(&writer)
 				m.output = writer.Output

@@ -2,11 +2,11 @@ package ui
 
 import "strings"
 
-type WriteCollector struct {
+type CollectorWriter struct {
 	Output string
 }
 
-func (c *WriteCollector) Write(p []byte) (n int, err error) {
+func (c *CollectorWriter) Write(p []byte) (n int, err error) {
 	c.Output += strings.Clone(string(p))
 	return len(p), nil
 }
