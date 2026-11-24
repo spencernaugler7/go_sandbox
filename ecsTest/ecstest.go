@@ -29,7 +29,6 @@ type Game struct {
 func (g *Game) Update() error {
 	return nil
 }
-func (g *Game) Draw()
 
 var (
 	Position = donburi.NewComponentType[PositionData]()
