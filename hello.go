@@ -5,6 +5,7 @@ import (
 	"io"
 	"os"
 
+	"example/hello/cgo"
 	"example/hello/channels"
 	"example/hello/dayOne"
 	"example/hello/dayTwo"
@@ -28,6 +29,7 @@ func main() {
 	lotest.Register(registrar)
 	defaulttypevalues.Register(registrar)
 	ecstest.Register(registrar)
+	cgo.Register(registrar)
 
 	p := ui.New(&registrar)
 	if _, err := p.Run(); err != nil {
